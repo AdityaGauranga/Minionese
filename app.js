@@ -5,3 +5,4 @@ btnTranslate.addEventListener("click", function clickEventHandler() {
     console.log("clicked!");
     console.log("input", txtInput.value);
 })
+
