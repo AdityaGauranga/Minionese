@@ -5,7 +5,7 @@ var outputDiv = document.querySelector("#output");
 var serverURL = "https://api.funtranslations.com/translate/minion.json"
 
 function getTranslationURL(text){
-    return serverURL = "?" + "text=" + text
+    return serverURL + "?" + "text=" + text
 }
 
 function errorHandler(error){
@@ -20,8 +20,8 @@ function clickHandler() {
     fetch(getTranslationURL(inputText))
     .then(response => response.json())
     .then(json => {
-        var translatedTxt = json.contents.translated;
-        outputDiv.innerText = translatedTxt;
+        var translatedTxt = json.contents.translated; // output
+        outputDiv.innerText = translatedTxt; // translated text is becoming innerText
     })
     .catch(errorHandler)
 };
